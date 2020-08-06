@@ -1,5 +1,5 @@
 # Ybox
-A lightweight vanilla JS lightbox alternative, created by Yuval Ashkenazi and [Yoav Leshem](https://github.com/Leshemiko) 
+A lightweight vanilla JS lightbox alternative, created by [Yuval Ashkenazi](https://github.com/yuval123123) and [Yoav Leshem](https://github.com/Leshemiko) 
 License: no license required - use anywhere and as you wish.
 ## Compatibility
 Modern browsers such as Chrome, Firefox, and Safari on both desktop and smartphones have been tested.
