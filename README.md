@@ -1,11 +1,12 @@
 # Ybox
 A lightweight vanilla JS lightbox alternative, created by [Yuval Ashkenazi](https://github.com/yuval123123) and [Yoav Leshem](https://github.com/Leshemiko) 
-License: no license required - use anywhere and as you wish.
+### License: 
+no license required - use anywhere and as you wish.
 ## Compatibility
 Modern browsers such as Chrome, Firefox, and Safari on both desktop and smartphones have been tested.
 ## Usage
 include `Ybox.minified.js`, `directive.js` (for mobile zoom on images) and `Ybox.minified.css` into your document's `<head>`.
-Simply add `'openPopup'`  class to your `<a>` element,
+Simply add `'openPopup'` class to your `<a>` element,
 and call the function as follows:
 ```javascript
     <script>
