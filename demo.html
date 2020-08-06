@@ -62,20 +62,28 @@
             <pre>
                 <code style="text-align: left;">
                     &lt;script&gt;
-                        window.onload = function(){
-                            let ybox = new YBox();
-                            ybox.init();
-                            // custom events : onPopupOpen, onPopupClose, onNextItemClick, onPrevItemClick
-                            myYBox.onPopupOpen = function(){
-                                document.body.classList.add('custom')
-                            };
-                            myYBox.onNextItemClick = function(){
-                                console.log('next item clicked')
-                            };
-                            myYBox.onPrevItemClick = function(){
-                                console.log('prev item clicked')
-                            }
-                        }
+                    window.onload = function(){
+                        let myYBox = new YBox();
+                        
+                        myYBox.init();
+                        
+                        myYBox.onPopupOpen = function(){
+                            document.body.classList.add('custom')
+                        };
+
+                        myYBox.onPopupClose = function(){
+                            document.body.classList.remove('custom')
+                        };
+
+                        myYBox.onNextItemClick = function(){
+                            console.log('next item clicked')
+                        };
+
+                        myYBox.onPrevItemClick = function(){
+                            console.log('prev item clicked')
+                        };
+                       
+                    }
                     &lt;/script&gt;
                 </code>
             </pre>
