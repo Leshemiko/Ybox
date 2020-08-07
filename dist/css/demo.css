@@ -19,9 +19,7 @@ pre{
 	padding:15px;
 	border:1px solid #bcbbbb;
 }
-code{
-	font-family:Consolas,"courier new";
-}
+code{font-family:Consolas,"courier new";}
 main{
 	width:800px;
 	max-width:100%;
@@ -99,4 +97,9 @@ h1,h2, h3{
 	color:blue;
 	font-style:italic;
 	font-weight:bold;
+}
+.grey2{
+	color:#808080;
+	font-size:13px;
+	font-family:Consolas,"courier new";
 }
