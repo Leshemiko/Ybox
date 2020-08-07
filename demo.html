@@ -48,14 +48,15 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             </pre>
         </section>
         <section>
-            <h3>Link to another element on page (which contains an inner yBox link)</h3>
+            <h3>Link to another element on page <span style="font-size:18px;">(which contains an inner yBox link)</span></h3>
             <a href="#link1" class="yBox">Click to try</a> </a>
             <pre> 
-                <code><span class="blue">&lt;a</span> <span class="red">class</span>="<span class="purple">yBox</span>" <span class="red">href</span>="<span class="purple">#link1</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">#link1</span>"<span class="blue"> <span class="red">class</span>="<span class="purple">yBox</span>"&gt; &lt;/a&gt;</span></code>
             </pre>
             <div style="display:none;">
                 <div id="link1">
                     <div class="inner" style="width:200px;height:100px">
+						Hello
                         <a href="#link2" class="yBox">Inner link</a>
                     </div>
                 </div>
@@ -65,7 +66,7 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             </div>
         </section>
         <section class="iframeSection">
-            <h3>Link to an Iframe</h3>
+            <h3>Link to an Iframe <span class="grey2">( class="yBox yBox_iframe" )</span></h3>
             <a href="https://www.youtube.com/watch?v=eEMpCcLm6NI&list=RDeEMpCcLm6NI&start_radio=1" class="yBox yBox_iframe" rel="nofollow" title="Click Here">
                 <img id="koko" src="https://img.youtube.com/vi/eEMpCcLm6NI/0.jpg" alt="" width="100" height="100" />
             </a>
@@ -74,7 +75,7 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             </pre>
         </section>
         <section>
-            <h3>Custom yBox class</h3>
+            <h3>Custom yBox class <span class="grey2">( data-ybox-class="my_class" )</span></h3>
             <a href="#myLink" data-ybox-class="myYboxClass" class="yBox">Click to try</a>
             <pre> 
                 <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">#myLink</span>" <span class="red">data-ybox-class</span>="<span class="purple">myYboxClass</span>" <span class="red">class</span>="<span class="purple">yBox</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
@@ -85,18 +86,14 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             </div> 
         </section>
         <section>
-            <h3>
-               AJAX call 
-            </h3>
+            <h3>AJAX call <span class="grey2">( class="yBox yBox_ajax" )</span></h3>
             <a href="https://www.google.com" class="yBox yBox_ajax">Click to try</a>
             <pre> 
                 <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">https://www.google.com</span>" <span class="red">class</span>="<span class="purple">yBox yBox_ajax</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
         </section>
         <section>
-            <h3>
-               Gallery view by groups
-            </h3>
+            <h3>Gallery view by groups <span class="grey2">( data-ybox-group="group_name" )</span></h3>
             Group 1
             <div class="group-wrap">
                 <a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" class="yBox" data-ybox-group="group1">
