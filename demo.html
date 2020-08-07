@@ -2,129 +2,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ybox</title>
-    <link rel="stylesheet" href="dist/css/Ybox.minified.css">
+    <title>yBox</title>
+    <link rel="stylesheet" href="dist/css/demo.css">
+	
+    <link rel="stylesheet" href="dist/css/yBox.min.css">
     <script src="dist/js/directive.js"></script>
-    <script src="dist/js/Ybox.minified.js"></script>
+    <script src="dist/js/yBox.min.js"></script>
 </head>
-<style>
-/* just for the demo */
-    body, body * {
-     font-family: sans-serif;
-     font-size: 14px;
-     box-sizing: border-box;  
-    }
-    body.custom {
-        overflow: hidden;
-    }
-    section{
-        display: flex;
-        padding: 25px;
-        border-bottom: 1px dotted #ccc;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-    }
-    pre {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #f0f0f0;
-        padding: 15px;
-        font-weight: bold;
-    }
-    .popupWrapper{
-        background: pink;
-        border-radius: 50%;
-        min-width: 450px;
-        min-height: 450px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        border: 9px inset #fff;
-    }
-    .popupWrapper * {
-        font-size: 22px;
-    }
-    .group-wrap{
-        margin: 10px 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-</style>
 <body>
     <main>
         <section>
             <h3>Activation</h3>
             <pre>
-                <code style="text-align: left;">
-                    &lt;script&gt;
-                    window.onload = function(){
-                        let myYBox = new YBox();
-                        
-                        myYBox.init();
-                        
-                        myYBox.onPopupOpen = function(){
-                            document.body.classList.add('custom')
-                        };
+<code><span class="blue">&lt;script&gt;</span>
+window.onload = <span class="blue2">function</span>(){
+  <span class="blue2">let</span> myYbox = <span class="blue2">new</span> yBox();
+	
+  myYbox.init();
+	
+  myYbox.onYboxOpen = <span class="blue2">function</span>(){
+    document.body.classList.add(<span class="grey">'custom'</span>);
+  };
 
-                        myYBox.onPopupClose = function(){
-                            document.body.classList.remove('custom')
-                        };
+  myYbox.onYboxClose = <span class="blue2">function</span>(){
+    document.body.classList.remove(<span class="grey">'custom'</span>);
+  };
 
-                        myYBox.onNextItemClick = function(){
-                            console.log('next item clicked')
-                        };
+  myYbox.onNextItemClick = <span class="blue2">function</span>(){
+    console.log(<span class="grey">'next item clicked'</span>);
+  };
 
-                        myYBox.onPrevItemClick = function(){
-                            console.log('prev item clicked')
-                        };
-                       
-                    }
-                    &lt;/script&gt;
-                </code>
+  myYbox.onPrevItemClick = <span class="blue2">function</span>(){
+    console.log(<span class="grey">'prev item clicked'</span>);
+  };
+   
+};
+<span class="blue">&lt;/script&gt;</span></code>
             </pre>
         </section>
         <section>
-            <h3>
-                Link to another element on page (which contains an inner Ybox link)
-            </h3>
-            <a href="#link1" class="openPopup">Click me</a> </a>
+            <h3>Link to another element on page (which contains an inner yBox link)</h3>
+            <a href="#link1" class="yBox">Click to try</a> </a>
             <pre> 
-                <code> &lt;a class="openPopup" href="#link1"&gt; &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">class</span>="<span class="purple">yBox</span>" <span class="red">href</span>="<span class="purple">#link1</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
             <div style="display:none;">
                 <div id="link1">
-                    <div class="inner" style="width: 200px;height:150px">
-                        <a href="#link2" class="openPopup">Inner link</a>
+                    <div class="inner" style="width:200px;height:100px">
+                        <a href="#link2" class="yBox">Inner link</a>
                     </div>
                 </div>
             </div>
             <div style="display:none;">
-                <div id="link2">Hi :)</div>
+                <div id="link2">Hello again :)</div>
             </div>
         </section>
-        <section>
-            <h3>
-                Link to an Iframe
-            </h3>
-            <a href="https://www.youtube.com/watch?v=eEMpCcLm6NI&list=RDeEMpCcLm6NI&start_radio=1" class="openPopup openPopup_iframe" rel="nofollow">
-                <img id="koko" src="http://img.youtube.com/vi/eEMpCcLm6NI/0.jpg" alt="" width="100" height="100" />
+        <section class="iframeSection">
+            <h3>Link to an Iframe</h3>
+            <a href="https://www.youtube.com/watch?v=eEMpCcLm6NI&list=RDeEMpCcLm6NI&start_radio=1" class="yBox yBox_iframe" rel="nofollow" title="Click Here">
+                <img id="koko" src="https://img.youtube.com/vi/eEMpCcLm6NI/0.jpg" alt=" width="100" height="100" />
             </a>
             <pre> 
-                <code> &lt;a class="openPopup openPopup_iframe" href="https://www.youtube.com/watch?v=eEMpCcLm6NI&list=RDeEMpCcLm6NI&start_radio=1"&gt; &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">https://www.youtube.com...</span>" <span class="red">class</span>="<span class="purple">yBox yBox_iframe</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
         </section>
         <section>
-            <h3>
-               Custom popup wrapper class  
-            </h3>
-            <a href="#myLink" data-popup-class="popupWrapper" class="openPopup" >Click me</a>
+            <h3>Custom yBox class</h3>
+            <a href="#myLink" data-ybox-class="myYboxClass" class="yBox">Click to try</a>
             <pre> 
-                <code> &lt;a href="#myLink" data-popup-class="popupWrapper" class="openPopup"&gt;Click me &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">#myLink</span>" <span class="red">data-ybox-class</span>="<span class="purple">myYboxClass</span>" <span class="red">class</span>="<span class="purple">yBox</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
 
             <div id="myLink" style="display:none;">
@@ -135,65 +81,60 @@
             <h3>
                AJAX call 
             </h3>
-            <a href="https://www.google.com"  class="openPopup openPopup_ajax">Click me</a>
+            <a href="https://www.google.com" class="yBox yBox_ajax">Click to try</a>
             <pre> 
-                <code> &lt;a href="https://www.google.com"  class="openPopup openPopup_ajax"&gt;Click me &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">https://www.google.com</span>" <span class="red">class</span>="<span class="purple">yBox yBox_ajax</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
         </section>
         <section>
             <h3>
-               Gallery view by group  
+               Gallery view by groups
             </h3>
             group 1
             <div class="group-wrap">
-                <a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" class="openPopup" data-group="group1">
-                    <img src="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" alt="" width="200" />
+                <a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" class="yBox" data-ybox-group="group1">
+                    <img src="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" alt=" width="200" />
                 </a>
-                <a href="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" class="openPopup" data-group="group1">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" alt="" width="200" />
+                <a href="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" class="yBox" data-ybox-group="group1">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" alt=" width="200" />
                 </a>
-                <a href="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" class="openPopup" data-group="group1">
-                    <img src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" alt="" width="200" />
+                <a href="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" class="yBox" data-ybox-group="group1">
+                    <img src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" alt=" width="200" />
                 </a>
             </div>
             <pre> 
-                <code> &lt;a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg"  data-group="group1" class="openPopup"&gt; &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">image.jpg</span>" <span class="red">data-ybox-group</span>="<span class="purple">group1</span>" <span class="red">class</span>="<span class="purple">yBox</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
             group 2
             <div class="group-wrap">
-                <a href="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" class="openPopup" data-group="group2">
-                    <img src="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" alt="" width="200" />
+                <a href="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" class="yBox" data-ybox-group="group2">
+                    <img src="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" alt=" width="200" />
                 </a>
-                <a href="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" class="openPopup" data-group="group2">
-                    <img src="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" alt="" width="200" />
+                <a href="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" class="yBox" data-ybox-group="group2">
+                    <img src="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" alt=" width="200" />
                 </a>
             </div>
             <pre> 
-                <code> &lt;a href="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg"  data-group="group2" class="openPopup"&gt; &lt;/a&gt; </code>
+                <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">image.jpg</span>" <span class="red">data-ybox-group</span>="<span class="purple">group2</span>" <span class="red">class</span>="<span class="purple">yBox</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
         </section>
     </main>
    
-    
-    
-    
-    
-    
     <script>
         window.onload = function(){
-            let myYBox = new YBox();
+            let myYbox = new yBox();
             
-            myYBox.init();
-            myYBox.onPopupOpen = function(){
+            myYbox.init();
+            myYbox.onYboxOpen = function(){
                 document.body.classList.add('custom')
             }
-            myYBox.onPopupClose = function(){
+            myYbox.onYboxClose = function(){
                 document.body.classList.remove('custom')
             }
-            myYBox.onNextItemClick = function(){
+            myYbox.onNextItemClick = function(){
                 console.log('next item clicked')
             };
-            myYBox.onPrevItemClick = function(){
+            myYbox.onPrevItemClick = function(){
                 console.log('prev item clicked')
             }
            
