@@ -91,6 +91,7 @@ h1,h2, h3{
 	transition:all 0.2s ease;
 }
 .yBox:hover{background:#4CAF50;}
+.green{color:green;}
 .red{color:red;}
 .grey{color:#808080;}
 .blue{color:blue;}
