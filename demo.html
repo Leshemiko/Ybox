@@ -17,25 +17,32 @@
 <code><span class="blue">&lt;script&gt;</span>
 window.onload = <span class="blue2">function</span>(){
   <span class="blue2">let</span> myYbox = <span class="blue2">new</span> yBox();
-	
   myYbox.init();
-	
-  myYbox.onYboxOpen = <span class="blue2">function</span>(){
-    document.body.classList.add(<span class="grey">'custom'</span>);
-  };
+};
 
-  myYbox.onYboxClose = <span class="blue2">function</span>(){
-    document.body.classList.remove(<span class="grey">'custom'</span>);
-  };
+<span class="green">// EVENTS</span>
 
-  myYbox.onNextItemClick = <span class="blue2">function</span>(){
-    console.log(<span class="grey">'next item clicked'</span>);
-  };
+<span class="green">// On Load</span>
+myYbox.yBox(<span class="grey">'Just trigger me anywhere'</span>);
 
-  myYbox.onPrevItemClick = <span class="blue2">function</span>(){
-    console.log(<span class="grey">'prev item clicked'</span>);
-  };
-   
+<span class="green">// On Open</span>
+myYbox.onYboxOpen = <span class="blue2">function</span>(){
+  document.body.classList.add(<span class="grey">'custom'</span>);
+};
+
+<span class="green">// On Close</span>
+myYbox.onYboxClose = <span class="blue2">function</span>(){
+  document.body.classList.remove(<span class="grey">'custom'</span>);
+};
+
+<span class="green">// On Next</span>
+myYbox.onNextItemClick = <span class="blue2">function</span>(){
+  console.log(<span class="grey">'Next item clicked'</span>);
+};
+
+<span class="green">// On Prev</span>
+myYbox.onPrevItemClick = <span class="blue2">function</span>(){
+  console.log(<span class="grey">'Prev item clicked'</span>);
 };
 <span class="blue">&lt;/script&gt;</span></code>
             </pre>
@@ -90,7 +97,7 @@ window.onload = <span class="blue2">function</span>(){
             <h3>
                Gallery view by groups
             </h3>
-            group 1
+            Group 1
             <div class="group-wrap">
                 <a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" class="yBox" data-ybox-group="group1">
                     <img src="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" alt=" width="200" />
@@ -105,7 +112,7 @@ window.onload = <span class="blue2">function</span>(){
             <pre> 
                 <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">image.jpg</span>" <span class="red">data-ybox-group</span>="<span class="purple">group1</span>" <span class="red">class</span>="<span class="purple">yBox</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
             </pre>
-            group 2
+            Group 2
             <div class="group-wrap">
                 <a href="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" class="yBox" data-ybox-group="group2">
                     <img src="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" alt=" width="200" />
