@@ -13,7 +13,7 @@ and call the function as follows:
             window.onload = function(){
                 let myYbox = new yBox();
                 myYbox.init();
-            }
+            };
     </script>
 ```
 ### Examples
@@ -52,7 +52,7 @@ and call the function as follows:
         window.onload = function(){
             var myYbox = new yBox();
             myYbox.init();
-        }
+        };
     </script>
     </body>
     </html>
@@ -63,15 +63,15 @@ and call the function as follows:
  ```javascript
     myYbox.yBox('Just trigger me anywhere');
     myYbox.onYboxOpen = function(){// Fires when yBox is opened
-        document.body.classList.add('custom')
-    }
+        document.body.classList.add('custom');
+    };
     myYbox.onYboxClose = function(){// Fires when yBox is closed
-        document.body.classList.remove('custom')
-    }
+        document.body.classList.remove('custom');
+    };
     myYbox.onNextItemClick = function(){// Fires when clicking next image button on a group gallery
-        console.log('Next item clicked')
+        console.log('Next item clicked');
     };
     myYbox.onPrevItemClick = function(){// Fires when clicking prev image button on a group gallery
-        console.log('Prev item clicked')
-    }
+        console.log('Prev item clicked');
+    };
  ```
