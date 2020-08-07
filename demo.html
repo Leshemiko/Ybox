@@ -67,7 +67,7 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
         <section class="iframeSection">
             <h3>Link to an Iframe</h3>
             <a href="https://www.youtube.com/watch?v=eEMpCcLm6NI&list=RDeEMpCcLm6NI&start_radio=1" class="yBox yBox_iframe" rel="nofollow" title="Click Here">
-                <img id="koko" src="https://img.youtube.com/vi/eEMpCcLm6NI/0.jpg" alt=" width="100" height="100" />
+                <img id="koko" src="https://img.youtube.com/vi/eEMpCcLm6NI/0.jpg" alt="" width="100" height="100" />
             </a>
             <pre> 
                 <code><span class="blue">&lt;a</span> <span class="red">href</span>="<span class="purple">https://www.youtube.com...</span>" <span class="red">class</span>="<span class="purple">yBox yBox_iframe</span>"<span class="blue">&gt; &lt;/a&gt;</span></code>
@@ -100,13 +100,13 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             Group 1
             <div class="group-wrap">
                 <a href="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" class="yBox" data-ybox-group="group1">
-                    <img src="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" alt=" width="200" />
+                    <img src="https://cdn.hswstatic.com/gif/10-breathtaking-views-1-orig.jpg" alt="" width="200" />
                 </a>
                 <a href="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" class="yBox" data-ybox-group="group1">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" alt=" width="200" />
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-m/1280/15/d6/77/e7/the-view.jpg" alt="" width="200" />
                 </a>
                 <a href="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" class="yBox" data-ybox-group="group1">
-                    <img src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" alt=" width="200" />
+                    <img src="https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/1520546583/four-seasons-resort-oahu-hawaii-POOLVIEW0318.jpg?itok=9KF4MOHV" alt="" width="200" />
                 </a>
             </div>
             <pre> 
@@ -115,10 +115,10 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
             Group 2
             <div class="group-wrap">
                 <a href="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" class="yBox" data-ybox-group="group2">
-                    <img src="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" alt=" width="200" />
+                    <img src="https://miro.medium.com/max/4000/0*5s38dDBsBUBRLo6O.jpg" alt="" width="200" />
                 </a>
                 <a href="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" class="yBox" data-ybox-group="group2">
-                    <img src="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" alt=" width="200" />
+                    <img src="https://www.aragon.ca/wp-content/uploads/2018/07/Exterior_neighbourhood-view-2_1800px.jpg" alt="" width="200" />
                 </a>
             </div>
             <pre> 
@@ -128,24 +128,23 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
     </main>
    
     <script>
-        window.onload = function(){
-            let myYbox = new yBox();
-            
-            myYbox.init();
-            myYbox.onYboxOpen = function(){
-                document.body.classList.add('custom')
-            }
-            myYbox.onYboxClose = function(){
-                document.body.classList.remove('custom')
-            }
-            myYbox.onNextItemClick = function(){
-                console.log('next item clicked')
-            };
-            myYbox.onPrevItemClick = function(){
-                console.log('prev item clicked')
-            }
-           
-        }
-    </script>
+	window.onload = function(){
+		let myYbox = new yBox();
+		myYbox.init();
+		
+		myYbox.onYboxOpen = function(){
+			document.body.classList.add('yBoxIsOpen');
+		}
+		myYbox.onYboxClose = function(){
+			document.body.classList.remove('yBoxIsOpen');
+		}
+		myYbox.onNextItemClick = function(){
+			console.log('next item clicked');
+		};
+		myYbox.onPrevItemClick = function(){
+			console.log('prev item clicked');
+		}
+	};
+</script>
 </body>
 </html>

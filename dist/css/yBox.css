@@ -30,7 +30,11 @@
 	opacity:1;
 	-khtml-opacity:1;
 }
-.yBoxImgZoom{width:100%;max-height:100%;}
+.yBoxImgZoom{
+	width:100%;
+	max-height:100%;
+	overflow:hidden;
+}
 .yBoxFrame{
 	background:#fff;
 	max-width:-webkit-calc(100% - 10px);
@@ -124,8 +128,8 @@
 	max-height:calc(100vh - 10px);
 }
 .yBoxFrame.yBoxImgWrap img.yBoxImg{
-	max-width:-webkit-calc(100vw - 30px);
-	max-width:calc(100vw - 30px);
+	max-width:-webkit-calc(100vw - 50px);
+	max-width:calc(100vw - 50px);
 	max-height:-webkit-calc(100vh - 30px);
 	max-height:calc(100vh - 30px);
 	vertical-align:top;
@@ -219,7 +223,7 @@
 	.yBoxFrame.yBoxImgWrap .yBoxNextImg, .yBoxFrame.yBoxImgWrap .yBoxPrevImg{width:50px;max-width:30%;height:50%;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);}
 	.yBoxFrame.yBoxImgWrap .insertYboxAjaxHere{height:-webkit-calc(100vh - 10px);height:calc(100vh - 10px);}
 	.yBoxFrame.yBoxImgWrap{width:-webkit-calc(100vw - 10px);width:calc(100vw - 10px);height:-webkit-calc(100vh - 10px);height:calc(100vh - 10px);}
-	.yBoxImgZoom{display:flex;justify-content:center;align-items:center;background:#000;overflow:hidden;}
+	.yBoxImgZoom{display:flex;justify-content:center;align-items:center;background:#000;height:100%;overflow:hidden;}
 }
 @media screen and (max-width:479px){
 	.yBoxFrame.yBoxImgWrap, .yBoxFrame.yBoxIframeWrap{height:-webkit-calc(100vh - 80px);height:calc(100vh - 80px);}
