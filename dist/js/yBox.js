@@ -186,6 +186,7 @@ function yBox() {
                 let placeHolderHtml = document.createRange().createContextualFragment(`<div class="yBoxPlaceHolder"></div>`)
                 urlElement.appendChild(placeHolderHtml);
                 let temp = document.createElement('div');
+				temp.className = 'yBoxInnerHtmlDiv';
                 temp.innerHTML =  urlElement.innerHTML;
                 insertYboxAjaxHereEl.appendChild(temp);
                 yb.init();
