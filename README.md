@@ -10,10 +10,12 @@ Simply add `'yBox'` class to your `<a>` element,
 and call the function as follows:
 ```javascript
     <script>
+    if(document.querySelector('.yBox')){
             window.onload = function(){
                 let myYbox = new yBox();
                 myYbox.init();
             };
+     }
     </script>
 ```
 ### Examples
@@ -49,10 +51,12 @@ and call the function as follows:
             <img src="/path_to_image3" alt="" width="200" />
         </a>
     <script>
+    if(document.querySelector('.yBox')){
         window.onload = function(){
             var myYbox = new yBox();
             myYbox.init();
         };
+    }
     </script>
     </body>
     </html>
