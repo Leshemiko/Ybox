@@ -57,7 +57,7 @@ function yBox() {
             hasSelf = false;
         }
         if(hasSelf){
-            yBoxClass = el.getAttribute('data-ybox-class');
+            yBoxClass = el.getAttribute('data-ybox-class') ? el.getAttribute('data-ybox-class') : '';
              url = el.getAttribute('href');
         }
         html = document.createRange().createContextualFragment(`<div class="yBoxOverlay">
