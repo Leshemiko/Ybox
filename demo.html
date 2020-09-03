@@ -15,12 +15,12 @@
             <h3>Activation</h3>
             <pre>
 <code><span class="blue">&lt;script&gt;</span>
-<span class="blue">if</span>(<span class="brown">document</span>.querySelector(<span class="grey">'.yBox'</span>)){
-  window.onload = <span class="blue2">function</span>(){
+window.onload = <span class="blue2">function</span>(){
+  <span class="blue">if</span>(<span class="brown">document</span>.querySelector(<span class="grey">'.yBox'</span>)){
     <span class="blue2">let</span> myYbox = <span class="blue2">new</span> yBox();
     myYbox.init();
-  };
-}
+  }
+};
 
 <span class="green">// EVENTS</span>
 
