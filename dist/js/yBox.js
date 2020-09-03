@@ -86,8 +86,9 @@ function yBox() {
         }else{
             if(document.querySelector('.yBoxFrame.yBoxImgWrap')){
                 if(placeHolderEl){
-                    placeHolderEl.parentNode.insertBefore(insertYboxAjaxHereEl.innerHTML, placeHolderEl);
+                    placeHolderEl.parentNode.insertBefore(insertYboxAjaxHereEl, placeHolderEl);
                     // placeHolderEl.parentNode.removeChild(placeHolderEl);
+                    // placeHolderEl.remove();
                 }else {
                     placeHolderEl = document.createElement('div') ;
                     placeHolderEl.classList.add('yBoxPlaceHolder') 
@@ -104,7 +105,8 @@ function yBox() {
                 yb.helpers.animate(insertYboxAjaxHereEl, 'opacity', 0, .2, function(){
                     if(placeHolderEl){
                         // placeHolderEl.parentNode.insertBefore(insertYboxAjaxHereEl.innerHTML, placeHolderEl);
-                        placeHolderEl.parentNode.removeChild(placeHolderEl);
+                        // placeHolderEl.parentNode.removeChild(placeHolderEl);
+                        placeHolderEl.remove();
                     }
                     insertYboxAjaxHereEl.innerHTML = '';
                     yb.insertYboxHtml(el,hasSelf,url,code,function(){
@@ -184,7 +186,8 @@ function yBox() {
             }else{
                 let urlElement = document.querySelector(url);
                 let placeHolderHtml = document.createRange().createContextualFragment(`<div class="yBoxPlaceHolder"></div>`)
-                urlElement.appendChild(placeHolderHtml);
+                // urlElement.appendChild(placeHolderHtml);
+                urlElement.parentNode.insertBefore(placeHolderHtml, urlElement.nextSibling);
                 let temp = document.createElement('div');
 				temp.className = 'yBoxInnerHtmlDiv';
                 temp.innerHTML =  urlElement.innerHTML;
