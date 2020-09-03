@@ -128,8 +128,9 @@ myYbox.onPrevItemClick = <span class="blue2">function</span>(){
    
     <script>
 	window.onload = function(){
+        let myYbox;
 		if(document.querySelector('.yBox')){
-			let myYbox = new yBox();
+			myYbox = new yBox();
 			myYbox.init();
 		}
 		
