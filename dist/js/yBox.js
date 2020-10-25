@@ -87,7 +87,7 @@ function yBox() {
             if(document.querySelector('.yBoxFrame.yBoxImgWrap')){
                 if(placeHolderEl){
                     placeHolderEl.parentNode.insertBefore(insertYboxAjaxHereEl, placeHolderEl);
-                    // placeHolderEl.parentNode.removeChild(placeHolderEl);
+                    placeHolderEl.parentNode.removeChild(placeHolderEl);
                     // placeHolderEl.remove();
                 }else {
                     placeHolderEl = document.createElement('div') ;
@@ -103,9 +103,9 @@ function yBox() {
                 });
             }else{
                 yb.helpers.animate(insertYboxAjaxHereEl, 'opacity', 0, .2, function(){
-                    if(placeHolderEl){
+                    if(placeHolderEl  && placeHolderEl.parentNode){
                         // placeHolderEl.parentNode.insertBefore(insertYboxAjaxHereEl.innerHTML, placeHolderEl);
-                        // placeHolderEl.parentNode.removeChild(placeHolderEl);
+                        placeHolderEl.parentNode.removeChild(placeHolderEl);
                         placeHolderEl.remove();
                     }
                     insertYboxAjaxHereEl.innerHTML = '';
@@ -185,7 +185,7 @@ function yBox() {
                 };
             }else{
                 let urlElement = document.querySelector(url);
-                let placeHolderHtml = document.createRange().createContextualFragment(`<div class="yBoxPlaceHolder"></div>`)
+                let placeHolderHtml = placeHolderEl ? placeHolderEl : document.createRange().createContextualFragment(`<div class="yBoxPlaceHolder"></div>`)
                 // urlElement.appendChild(placeHolderHtml);
                 urlElement.parentNode.insertBefore(placeHolderHtml, urlElement.nextSibling);
                 let temp = document.createElement('div');
